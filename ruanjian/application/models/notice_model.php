@@ -1,7 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 class Notice_model extends CI_Model{
-    public function get_notice_by_id(){
+    public function get_notice(){
         $sql = "select notice_cont,notice_title,notice_id from notice where notice_id <=(select max(notice_id) from notice)order by notice_id desc limit 5";
+        return $this->db->query($sql)->result();
+    }
+    public function get_notice_by_id($id){
+        $sql = "select * from notice where notice_id=".$id;
         return $this->db->query($sql)->result();
     }
     public function save($tit,$cont){

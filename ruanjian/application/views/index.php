@@ -231,7 +231,7 @@
             <h2>新闻</h2>
             <ul>
                 <?php foreach($newses as $news){ ?>
-                    <li style="list-style: none"><h3><a style="text-decoration: none;color: #002166;margin-top:10px;display: block" href="Ruanjian/news"><?php echo $news->news_title;?></a></h3></li>
+                    <li style="list-style: none"><h3><a style="text-decoration: none;color: #002166;margin-top:10px;display: block" href="Ruanjian/news?id=<?php echo $news->news_id;?>"><?php echo $news->news_title;?></a></h3></li>
                 <?php } ?>
             </ul>
         </div>
@@ -239,7 +239,7 @@
             <h2>公告</h2>
             <ul>
                 <?php foreach($notices as $notice){ ?>
-                    <li style="list-style: none"><h3><a style="text-decoration: none;color: #002166;margin-top:10px;display: block" href="Ruanjian/notice"><?php echo $notice->notice_title;?></a></h3></li>
+                    <li style="list-style: none"><h3><a style="text-decoration: none;color: #002166;margin-top:10px;display: block" href="Ruanjian/notice?id=<?php echo $notice->notice_id;?>"><?php echo $notice->notice_title;?></a></h3></li>
                 <?php } ?>
             </ul>
         </div>

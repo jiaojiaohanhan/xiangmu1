@@ -6,8 +6,8 @@ class Ruanjian extends CI_Controller {
     public function index(){
         $this->load->model("news_model");
         $this->load->model("notice_model");
-        $newses = $this->news_model->get_news_by_id();
-        $notices = $this->notice_model->get_notice_by_id();
+        $newses = $this->news_model->get_news();
+        $notices = $this->notice_model->get_notice();
         $this->load->view("index",array(
             "newses" =>$newses,
             "notices" =>$notices
@@ -217,15 +217,17 @@ class Ruanjian extends CI_Controller {
         $this->load->view("teach3");
     }
     public function news(){
+        $id = $this->input->get('id');
         $this->load->model("news_model");
-        $newses = $this->news_model->get_news_by_id();
+        $newses = $this->news_model->get_news_by_id($id);
         $this->load->view("news",array(
             "newses" =>$newses,
         ));
     }
     public function notice(){
+        $id = $this->input->get('id');
         $this->load->model("notice_model");
-        $notices = $this->notice_model->get_notice_by_id();
+        $notices = $this->notice_model->get_notice_by_id($id);
         $this->load->view("notice",array(
             "notices" =>$notices
         ));
@@ -233,8 +235,8 @@ class Ruanjian extends CI_Controller {
     public function content2(){
         $this->load->model("news_model");
         $this->load->model("notice_model");
-        $newses = $this->news_model->get_news_by_id();
-        $notices = $this->notice_model->get_notice_by_id();
+        $newses = $this->news_model->get_news();
+        $notices = $this->notice_model->get_notice();
         $this->load->view("content2",array(
             "newses" =>$newses,
             "notices" =>$notices

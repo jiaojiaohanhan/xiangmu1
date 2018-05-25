@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - jiaohan@localhost" uuid="bc6db4b7-e0c1-4afc-a60e-6f672006a126">
+    <database-info product="MySQL" version="5.7.17-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="jiaohan"/>
+      <table id="2" parent="1" name="news"/>
+      <table id="3" parent="1" name="notice"/>
+      <table id="4" parent="1" name="user"/>
+      <column id="5" parent="2" name="news_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="news_title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="7" parent="2" name="news_content">
+        <data-type>text</data-type>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>news_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="9" parent="3" name="notice_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="10" parent="3" name="notice_title">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="11" parent="3" name="notice_cont">
+        <data-type>text</data-type>
+      </column>
+      <key id="12" parent="3" name="PRIMARY">
+        <columns>notice_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="13" parent="4" name="admin">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="14" parent="4" name="username">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="15" parent="4" name="password">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="16" parent="4" name="PRIMARY">
+        <columns>admin</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
